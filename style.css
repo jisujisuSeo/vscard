@@ -313,3 +313,37 @@ body::after{
         flex-direction:column;
     }
 }
+
+.card{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+
+.card:hover{
+
+    transform:
+        translateY(-12px);
+
+    box-shadow:
+        0 40px 80px rgba(0,0,0,.12),
+        0 20px 45px rgba(157,130,255,.25);
+}
+
+
+.email{
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+
+.email:hover{
+
+    color:#9d82ff;
+
+    text-decoration:underline;
+}
