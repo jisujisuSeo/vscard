@@ -1,15 +1,24 @@
-function copyEmail() {
+function copyEmail(event){
+
+    event.preventDefault();
 
     navigator.clipboard.writeText(
         "seogs1004@naver.com"
-    );
+    ).then(() => {
 
-    alert("이메일이 복사되었습니다.");
+        alert("이메일이 클립보드에 복사되었습니다.");
+
+    }).catch(() => {
+
+        alert("복사에 실패했습니다.");
+
+    });
 }
 
-function downloadVCard() {
 
-    const vcard =
+function downloadVCard(){
+
+const vcard =
 `BEGIN:VCARD
 VERSION:3.0
 FN:서지수
@@ -18,19 +27,24 @@ TEL:01067784077
 EMAIL:seogs1004@naver.com
 END:VCARD`;
 
-    const blob = new Blob(
-        [vcard],
-        { type: 'text/vcard' }
-    );
+const blob = new Blob(
+    [vcard],
+    {type:'text/vcard'}
+);
 
-    const url = URL.createObjectURL(blob);
+const url = URL.createObjectURL(blob);
 
-    const a = document.createElement('a');
+const a = document.createElement('a');
 
-    a.href = url;
-    a.download = 'SEO_JISU.vcf';
+a.href = url;
+a.download = 'SEO_JISU.vcf';
 
-    a.click();
+document.body.appendChild(a);
 
-    URL.revokeObjectURL(url);
+a.click();
+
+document.body.removeChild(a);
+
+URL.revokeObjectURL(url);
+
 }
