@@ -3,10 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const emailBtn =
         document.getElementById("email-copy");
 
-    emailBtn.addEventListener(
-        "click",
-        copyEmail
-    );
+    if(emailBtn){
+
+        emailBtn.addEventListener(
+            "click",
+            copyEmail
+        );
+    }
 
 });
 
@@ -23,15 +26,29 @@ function copyEmail(){
         );
 
     })
-    .catch((err) => {
-
-        console.error(err);
+    .catch(() => {
 
         alert(
             "복사에 실패했습니다."
         );
 
     });
+
+}
+
+
+function sendEmail(){
+
+    const email =
+    "seogs1004@naver.com";
+
+    const subject =
+    encodeURIComponent(
+        "SEO JISU | Contact"
+    );
+
+    window.location.href =
+    `mailto:${email}?subject=${subject}`;
 
 }
 

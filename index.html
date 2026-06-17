@@ -1,48 +1,87 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEO JISU | Development PM</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        SEO JISU | Development PM
+    </title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
 <div class="card">
 
+    <!-- 프로필 -->
+
     <div class="profile">
-        <img src="image.png" alt="SEO JISU">
+
+        <img src="image.png"
+             alt="SEO JISU">
+
     </div>
 
+
+    <!-- 이름 -->
+
     <div class="eng-name">
+
         SEO JISU
+
     </div>
 
     <div class="kr-name">
+
         서지수
+
     </div>
 
     <div class="position">
+
         Development PM
+
     </div>
+
+
+
+    <!-- 정보 -->
 
     <div class="info">
 
+
+        <!-- 이메일 -->
+
         <div class="info-item">
 
-            <div class="icon">✉</div>
+            <div class="icon">
+
+                ✉
+
+            </div>
 
             <div class="info-text">
 
                 <div class="label">
+
                     EMAIL
+
                 </div>
 
                 <a
-                    class="value email"
+
                     id="email-copy"
+
+                    class="value email"
+
                     href="javascript:void(0);">
 
                     seogs1004@naver.com
@@ -53,18 +92,30 @@
 
         </div>
 
+
+
+        <!-- 전화 -->
+
         <div class="info-item">
 
-            <div class="icon">☎</div>
+            <div class="icon">
+
+                ☎
+
+            </div>
 
             <div class="info-text">
 
                 <div class="label">
+
                     PHONE
+
                 </div>
 
                 <a
+
                     class="value"
+
                     href="tel:01067784077">
 
                     010-6778-4077
@@ -75,27 +126,61 @@
 
         </div>
 
+
     </div>
+
+
+
+    <!-- 버튼 -->
 
     <div class="actions">
 
+
+        <!-- 연락처 저장 -->
+
         <button
+
             class="btn primary"
+
             onclick="downloadVCard()">
 
             연락처 저장
 
         </button>
 
+
+
+        <!-- 이메일 보내기 -->
+
+        <button
+
+            class="btn secondary"
+
+            onclick="sendEmail()">
+
+            이메일 보내기
+
+        </button>
+
+
     </div>
+
+
+
+    <!-- 하단 -->
 
     <div class="footer">
+
         Development Project Manager
+
     </div>
 
+
 </div>
+
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
